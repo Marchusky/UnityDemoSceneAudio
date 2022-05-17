@@ -1,0 +1,19 @@
+{
+    "name": "CCPro",
+    "rootNamespace": "GWLPXL.ActionCharacter.Integration.CCPro",
+    "references": [
+        "GUID:494ed1191885cee49b1e0c704a4d418b",
+        "GUID:2e7f0f7a8ee6e144db6fb95614c6d8fe"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "GWLPXL_ActionCharacter"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
