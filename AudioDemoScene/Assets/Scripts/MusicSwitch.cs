@@ -15,11 +15,12 @@ public static class AudioHelper
         audioSource.Stop();
     }
 
-    public static IEnumerator FadeIn(AudioSource audioSource, float FadeTime)
+    public static IEnumerator FadeIn(AudioSource audioSource, float FadeTime, float maxVolume = 1, float time = 0.0f)
     {
+        if (time != 0.0f) audioSource.time = time;
         audioSource.Play();
         audioSource.volume = 0f;
-        while (audioSource.volume < 1)
+        while (audioSource.volume < maxVolume)
         {
             audioSource.volume += Time.deltaTime / FadeTime;
             yield return null;
@@ -33,38 +34,39 @@ public class MusicSwitch : MonoBehaviour
     public AudioSource calm;
     public AudioSource alert;
     public AudioSource attack;
-    public AudioSource well;
 
     public float fadeTime = 2.0f;
+    [Range(0.05f, 1.0f)]
+    public float volume = 1.0f;
 
     private bool alertBool;
     private bool attackBool;
+    
+    void Start()
+    {
+        calm.volume = volume;
+        alert.volume = volume;
+        attack.volume = volume;
+    }
 
     void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("Enter");
-
         if (collision.gameObject.tag == "Alert" && !attackBool)
         {
-            Debug.Log("Alert");
-            float volume = calm.volume;
-            StartCoroutine(AudioHelper.FadeIn(alert, fadeTime));
+            float time = calm.time;
             StartCoroutine(AudioHelper.FadeOut(calm, fadeTime));
+            StartCoroutine(AudioHelper.FadeIn(alert, fadeTime, volume, time));
             attack.Stop();
             alertBool = true;
         }
 
         if (collision.gameObject.tag == "Attack" && alertBool)
         {
+            float time = alert.time;
             calm.Stop();
-            alert.Stop();
-            attack.Play();
+            StartCoroutine(AudioHelper.FadeOut(alert, fadeTime));
+            StartCoroutine(AudioHelper.FadeIn(attack, fadeTime, volume, time));
             attackBool = true;
-        }
-
-        if (collision.gameObject.tag == "Well")
-        {
-            well.Play();
         }
 
     }
@@ -73,23 +75,20 @@ public class MusicSwitch : MonoBehaviour
     {
         if (collision.gameObject.tag == "Alert" && !attackBool)
         {
-            calm.Play();
-            alert.Stop();
+            float time = alert.time;
+            StartCoroutine(AudioHelper.FadeOut(alert, fadeTime));
+            StartCoroutine(AudioHelper.FadeIn(calm, fadeTime, volume, time));
             attack.Stop();
             alertBool = false;
         }
 
         if (collision.gameObject.tag == "Attack" && alertBool)
         {
+            float time = attack.time;
             calm.Stop();
-            alert.Play();
-            attack.Stop();
+            StartCoroutine(AudioHelper.FadeOut(attack, fadeTime));
+            StartCoroutine(AudioHelper.FadeIn(alert, fadeTime, volume, time));
             attackBool = false;
-        }
-
-        if (collision.gameObject.tag == "Well")
-        {
-            well.Stop();
         }
     }
 }
