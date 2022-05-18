@@ -1,8 +1,8 @@
 fileFormatVersion: 2
-guid: b3662f281ce0fd5449670a910110afc4
+guid: 0e06c41bd9f5e8c44845a65c1623d4be
 labels:
 - Animation
-timeCreated: 1483629631
+timeCreated: 1483629630
 licenseType: Store
 ModelImporter:
   serializedVersion: 19
@@ -68,7 +68,7 @@ ModelImporter:
     400056: //RootNode
     400058: M_male1
     4300000: M_male1
-    7400000: pickup
+    7400000: idle
     9500000: //RootNode
     13700000: M_male1
   materials:
@@ -93,17 +93,17 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: pickup
+      name: idle
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 117
+      lastFrame: 240
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1

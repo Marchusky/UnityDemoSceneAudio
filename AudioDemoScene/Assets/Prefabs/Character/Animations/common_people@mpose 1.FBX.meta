@@ -1,9 +1,8 @@
 fileFormatVersion: 2
-guid: 77d7842e2139f594bb31c3c63d1ad4b4
+guid: a8aea8dce277f1a46b8ac149724245f1
 labels:
 - Animation
-- Movement
-timeCreated: 1483629630
+timeCreated: 1483632032
 licenseType: Store
 ModelImporter:
   serializedVersion: 19
@@ -69,7 +68,7 @@ ModelImporter:
     400056: //RootNode
     400058: M_male1
     4300000: M_male1
-    7400000: walk
+    7400000: Take 001
     9500000: //RootNode
     13700000: M_male1
   materials:
@@ -92,121 +91,7 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: walk
-      takeName: Take 001
-      firstFrame: 0
-      lastFrame: 70
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
-      keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: basic_rig
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig L Thigh
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig L Thigh/basic_rig L Calf
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig L Thigh/basic_rig L Calf/basic_rig
-          L Foot
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig L Thigh/basic_rig L Calf/basic_rig
-          L Foot/basic_rig L Toe0
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig R Thigh
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig R Thigh/basic_rig R Calf
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig R Thigh/basic_rig R Calf/basic_rig
-          R Foot
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig R Thigh/basic_rig R Calf/basic_rig
-          R Foot/basic_rig R Toe0
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig Spine
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig Spine/basic_rig Spine1
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig Spine/basic_rig Spine1/basic_rig
-          L Clavicle
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig Spine/basic_rig Spine1/basic_rig
-          L Clavicle/basic_rig L UpperArm
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig Spine/basic_rig Spine1/basic_rig
-          L Clavicle/basic_rig L UpperArm/basic_rig L Forearm
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig Spine/basic_rig Spine1/basic_rig
-          L Clavicle/basic_rig L UpperArm/basic_rig L Forearm/basic_rig L Hand
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig Spine/basic_rig Spine1/basic_rig
-          L Clavicle/basic_rig L UpperArm/basic_rig L Forearm/basic_rig L Hand/basic_rig
-          L Finger0
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig Spine/basic_rig Spine1/basic_rig
-          L Clavicle/basic_rig L UpperArm/basic_rig L Forearm/basic_rig L Hand/basic_rig
-          L Finger1
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig Spine/basic_rig Spine1/basic_rig
-          L Clavicle/basic_rig L UpperArm/basic_rig L Forearm/basic_rig L Hand/basic_rig
-          L Finger2
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig Spine/basic_rig Spine1/basic_rig
-          Neck
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig Spine/basic_rig Spine1/basic_rig
-          Neck/basic_rig Head
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig Spine/basic_rig Spine1/basic_rig
-          R Clavicle
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig Spine/basic_rig Spine1/basic_rig
-          R Clavicle/basic_rig UpperArm
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig Spine/basic_rig Spine1/basic_rig
-          R Clavicle/basic_rig UpperArm/basic_rig R Forearm
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig Spine/basic_rig Spine1/basic_rig
-          R Clavicle/basic_rig UpperArm/basic_rig R Forearm/basic_rig R Hand
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig Spine/basic_rig Spine1/basic_rig
-          R Clavicle/basic_rig UpperArm/basic_rig R Forearm/basic_rig R Hand/basic_rig
-          R Finger0
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig Spine/basic_rig Spine1/basic_rig
-          R Clavicle/basic_rig UpperArm/basic_rig R Forearm/basic_rig R Hand/basic_rig
-          R Finger1
-        weight: 1
-      - path: basic_rig/basic_rig Pelvis/basic_rig Spine/basic_rig Spine1/basic_rig
-          R Clavicle/basic_rig UpperArm/basic_rig R Forearm/basic_rig R Hand/basic_rig
-          R Finger2
-        weight: 1
-      - path: M_male1
-        weight: 0
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -229,8 +114,8 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-  importAnimation: 1
-  copyAvatar: 1
+  importAnimation: 0
+  copyAvatar: 0
   humanDescription:
     serializedVersion: 2
     human:
@@ -613,8 +498,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 45d480461bbdc704587e117329ce8e69,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 3
   humanoidOversampling: 1
   additionalBone: 0

@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: 854ef493abe79464ca6e9795fb330040
+guid: 3f73143e78ab2ef4cb25d3e863230f2c
 labels:
 - Animation
 - Movement
-timeCreated: 1483629631
+timeCreated: 1483629630
 licenseType: Store
 ModelImporter:
   serializedVersion: 19
@@ -69,7 +69,7 @@ ModelImporter:
     400056: //RootNode
     400058: M_male1
     4300000: M_male1
-    7400000: backwards-walk
+    7400000: walk
     9500000: //RootNode
     13700000: M_male1
   materials:
@@ -94,10 +94,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: backwards-walk
+      name: walk
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 50
+      lastFrame: 70
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

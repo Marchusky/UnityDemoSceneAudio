@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: 587fb8efeff01634aa9ce8a5af77911a
+guid: 389abe624132c41468ed067dfe13b6b4
 labels:
 - Animation
 - Movement
-timeCreated: 1483629630
+timeCreated: 1483629631
 licenseType: Store
 ModelImporter:
   serializedVersion: 19
@@ -69,7 +69,7 @@ ModelImporter:
     400056: //RootNode
     400058: M_male1
     4300000: M_male1
-    7400000: run
+    7400000: jump-down
     9500000: //RootNode
     13700000: M_male1
   materials:
@@ -94,17 +94,17 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: run
+      name: jump-down
       takeName: Take 001
-      firstFrame: 0
-      lastFrame: 40
+      firstFrame: 32
+      lastFrame: 49
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1

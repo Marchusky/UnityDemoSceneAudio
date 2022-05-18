@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: 478fe807cc09b09448250cacc1ab8eb8
+guid: 3031c82a99e2e7f4ea47d2e50ffbcb9e
 labels:
 - Animation
 - Movement
-timeCreated: 1483629630
+timeCreated: 1483629631
 licenseType: Store
 ModelImporter:
   serializedVersion: 19
@@ -69,7 +69,7 @@ ModelImporter:
     400056: //RootNode
     400058: M_male1
     4300000: M_male1
-    7400000: backwards-run
+    7400000: jump-float
     9500000: //RootNode
     13700000: M_male1
   materials:
@@ -94,10 +94,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: backwards-run
+      name: jump-float
       takeName: Take 001
-      firstFrame: 0
-      lastFrame: 45
+      firstFrame: 55
+      lastFrame: 140
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

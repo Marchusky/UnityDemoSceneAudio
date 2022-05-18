@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 441579d7f72cae545a24352282ac90e0
+guid: 78d321d1ae3047d4dbe9e963307a7c34
 labels:
 - Animation
 - Movement
@@ -69,7 +69,7 @@ ModelImporter:
     400056: //RootNode
     400058: M_male1
     4300000: M_male1
-    7400000: jump-up
+    7400000: backwards-run
     9500000: //RootNode
     13700000: M_male1
   materials:
@@ -94,17 +94,17 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: jump-up
+      name: backwards-run
       takeName: Take 001
-      firstFrame: 5
-      lastFrame: 24
+      firstFrame: 0
+      lastFrame: 45
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1

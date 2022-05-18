@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a61a057436c775f449fcb20e89101739
+guid: 377384b92174b02489a903309a2fd7cb
 labels:
 - Animation
 - Movement
@@ -69,7 +69,7 @@ ModelImporter:
     400056: //RootNode
     400058: M_male1
     4300000: M_male1
-    7400000: jump-float
+    7400000: backwards-walk
     9500000: //RootNode
     13700000: M_male1
   materials:
@@ -94,10 +94,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: jump-float
+      name: backwards-walk
       takeName: Take 001
-      firstFrame: 55
-      lastFrame: 140
+      firstFrame: 0
+      lastFrame: 50
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
