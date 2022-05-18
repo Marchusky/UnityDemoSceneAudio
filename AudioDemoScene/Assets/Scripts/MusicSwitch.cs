@@ -33,6 +33,7 @@ public class MusicSwitch : MonoBehaviour
     public AudioSource calm;
     public AudioSource alert;
     public AudioSource attack;
+    public AudioSource well;
 
     public float fadeTime = 2.0f;
 
@@ -60,6 +61,12 @@ public class MusicSwitch : MonoBehaviour
             attack.Play();
             attackBool = true;
         }
+
+        if (collision.gameObject.tag == "Well")
+        {
+            well.Play();
+        }
+
     }
 
     void OnTriggerExit(Collider collision)
@@ -78,6 +85,11 @@ public class MusicSwitch : MonoBehaviour
             alert.Play();
             attack.Stop();
             attackBool = false;
+        }
+
+        if (collision.gameObject.tag == "Well")
+        {
+            well.Stop();
         }
     }
 }
