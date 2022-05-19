@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class SimpleSampleCharacterControl : MonoBehaviour
@@ -24,6 +25,8 @@ public class SimpleSampleCharacterControl : MonoBehaviour
 
     [SerializeField] private ControlMode m_controlMode = ControlMode.Direct;
 
+    public Camera camera;
+
     private float m_currentV = 0;
     private float m_currentH = 0;
 
@@ -42,6 +45,27 @@ public class SimpleSampleCharacterControl : MonoBehaviour
     private bool m_isGrounded;
 
     private List<Collider> m_collisions = new List<Collider>();
+
+    public float mouseSensitivity = 100f;
+    public Transform playerBody;
+
+    float xRotation = 0f;
+
+    public float Sensitivity
+    {
+        get { return sensitivity; }
+        set { sensitivity = value; }
+    }
+    [Range(0.1f, 9f)] [SerializeField] float sensitivity = 1f;
+    [Tooltip("Limits vertical camera rotation. Prevents the flipping that happens when rotation goes above 90.")]
+    [Range(0f, 90f)] [SerializeField] float yRotationLimit = 88f;
+
+    Vector2 rotation = Vector2.zero;
+
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 
     private void Awake()
     {
@@ -140,6 +164,20 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         float v = Input.GetAxis("Vertical1");
         float h = Input.GetAxis("Horizontal1");
 
+        //float x = 10 * Time.deltaTime * Input.GetAxis("Mouse X");
+        //float y = 10 * Time.deltaTime * Input.GetAxis("Mouse Y");
+
+        //camera.transform.Rotate(-y, x, 0);
+
+        //float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        //float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+
+        //xRotation -= mouseY;
+        //xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        //transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+
+        //playerBody.Rotate(Vector3.up * mouseX);
+
         bool walk = !Input.GetKey(KeyCode.LeftShift);
 
         if (v < 0)
@@ -156,7 +194,15 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         m_currentH = Mathf.Lerp(m_currentH, h, Time.deltaTime * m_interpolation);
 
         transform.position += transform.forward * m_currentV * m_moveSpeed * Time.deltaTime;
-        transform.Rotate(0, m_currentH * m_turnSpeed * Time.deltaTime, 0);
+        transform.position += transform.right * m_currentH * m_moveSpeed * Time.deltaTime;
+
+        rotation.x += Input.GetAxis("Mouse X") * sensitivity;
+        rotation.y += Input.GetAxis("Mouse Y") * sensitivity;
+        rotation.y = Mathf.Clamp(rotation.y, -yRotationLimit, yRotationLimit);
+        var xQuat = Quaternion.AngleAxis(rotation.x, Vector3.up);
+        var yQuat = Quaternion.AngleAxis(rotation.y, Vector3.left);
+
+        playerBody.localRotation = xQuat * yQuat;
 
         m_animator.SetFloat("MoveSpeed", m_currentV);
 
