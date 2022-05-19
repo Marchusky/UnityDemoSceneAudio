@@ -1,5 +1,10 @@
 # UnityDemoSceneAudio
-Unity demo scene made for Audio class in UPC CITM Barcelona by Albert Robles, Martí Buxeda, Marc Gallardo
+Unity demo scene made for Audio class in Design and Development of Videogames, UPC CITM Barcelona.
+
+## Team
+- [Martí Buxeda](https://github.com/Ar-Ess)
+- [Albert Robles](https://github.com/Albert-029)
+- [Marc Gallardo](https://github.com/Marchusky)
 
 ## Project Description
 This scene follows a character exploring a canyon in a rainy day and arriving to an unexplored place hiding something unimaginable...
